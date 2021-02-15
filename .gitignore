@@ -16,7 +16,7 @@ hs_err_pid*
 .settings/
 
 # Intellij
-.idea/
+.idea
 *.iml
 *.iws
 
@@ -28,7 +28,7 @@ log/
 target/
 
 # Inclusions
-!lib/**
+lib
 
 # Compiled Files
 *.class
