@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 public enum EcoNewsLocators implements BaseLocator{
     HEADER (By.cssSelector(".main-header")),
     GALLERY_BUTTON (By.cssSelector(".btn-tiles")),
-    LIST_BUTTON (By.cssSelector(".btn-bars"))
+    LIST_BUTTON (By.cssSelector(".btn-bars")),
     ;
 
     private By path;
