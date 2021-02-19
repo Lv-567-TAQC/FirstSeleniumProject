@@ -5,6 +5,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import java.util.Arrays;
+import java.util.List;
+
 public abstract class BaseElement {
     protected By path;
     protected WebElement element;
@@ -16,4 +19,16 @@ public abstract class BaseElement {
         this.element = driver.findElement(path);
     }
 
+    public BaseElement(WebElement element, BaseLocator locator){
+        this.path = locator.getPath();
+        this.element = element.findElement(path);
+    }
+
+    public BaseElement(WebElement element){
+        this.element = element;
+    }
+
+    public List<String> getCSSClasses(){
+        return  Arrays.asList(element.getAttribute("class").split(" "));
+    }
 }

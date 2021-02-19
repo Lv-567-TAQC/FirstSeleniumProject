@@ -11,6 +11,13 @@ public class EcoNewsListPage extends BasePage{
 
     private Button listButton;
     private Button galleryButton;
+    private Button newsCategoryButton;
+    private EcoNewsFilters filters;
+
+    public EcoNewsFilters getFilters(){
+        filters= new EcoNewsFilters(driver);
+        return filters;
+    }
 
     public EcoNewsListPage clickGalleryButton(){
         galleryButton = new Button(driver, EcoNewsLocators.GALLERY_BUTTON);
@@ -23,4 +30,6 @@ public class EcoNewsListPage extends BasePage{
         listButton.click();
         return this;
     }
+
+
 }
